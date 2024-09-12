@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pranayama Timer Routine</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for the pie chart -->
+</head>
+<body>
+  <div class="container">
+    <h1>Pranayama Timer</h1>
+
+    <div id="routine-container">
+      <h2 id="current-practice">Get Ready</h2>
+      <div id="timer-display">00:00</div>
+
+      <!-- Breath count display -->
+      <h3 id="breath-count" style="display: none;">Breath Count: 0</h3> <!-- Initially hidden -->
+
+      <!-- Control buttons -->
+      <div class="control-buttons">
+        <button id="prev-btn">⬅️</button>
+        <button id="start-btn">Start</button>
+        <button id="reset-btn">Reset</button>
+        <button id="next-btn">➡️</button>
+      </div>
+
+      <!-- List of practices -->
+      <div id="practice-list">
+        <h3>Practice List</h3>
+        <ul id="practice-items"></ul>
+      </div>
+      
+      <!-- Nadi Shodhana-specific section -->
+      <div id="nadi-shodhana-container" style="display: none;">
+        <!-- Pie Chart for Nadi Shodhana -->
+        <canvas id="nadiPieChart" width="300" height="300"></canvas>
+
+        <!-- Text for current phase -->
+        <h2 id="phase-text">Get Ready for Nadi Shodhana</h2>
+      </div>
+
+    </div>
+
+    <script src="script.js"></script>
+  </div>
+</body>
+</html>
